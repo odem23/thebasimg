@@ -6,7 +6,7 @@ RUN apt-get -yq update && \
     apt-get -yq -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade && \
     apt-get -yq -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install \
         git vim sudo build-essential gcc gdb make cmake cmake-gui cmake-curses-gui \
-        fakeroot devscripts dh-make lsb-release libssl-dev ssh doxygen graphviz iputils-ping && \
+        fakeroot devscripts dh-make lsb-release libssl-dev ssh net-tools doxygen graphviz iputils-ping && \
     mkdir -p /opt/openssl && \
     wget https://www.openssl.org/source/old/1.1.0/openssl-1.1.0l.tar.gz -O /opt/openssl/openssl-1.1.0l.tar.gz && \
     tar xzvf /opt/openssl/openssl-1.1.0l.tar.gz --directory /opt/openssl && \
